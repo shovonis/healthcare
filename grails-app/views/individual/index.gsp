@@ -10,10 +10,8 @@
 <body>
 
 <div class="basic-grey">
-    <a href="#list-individual" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
-                                                                     default="Skip to content&hellip;"/></a>
 
-    <div class="nav" role="navigation">
+    <div class="ui-tabs-nav" role="navigation">
         <ul>
             <li><a class="home" href="${createLink(uri: '/home')}"><g:message code="default.home.label"/></a></li>
             <li><g:link class="create" action="create"><g:message code="default.new.label"

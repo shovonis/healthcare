@@ -17,7 +17,7 @@
                 <g:link url="[action: 'index', controller: 'individual']">Individual Home</g:link>
             </li>
             <li>
-                <g:link url="[action: '#', controller: '#']">Admin Home</g:link>
+                <g:link url="[action: 'index', controller: 'admin']">Admin Home</g:link>
             </li>
         </ul>
     </div>
