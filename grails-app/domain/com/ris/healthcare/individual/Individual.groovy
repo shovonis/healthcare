@@ -1,6 +1,8 @@
-package com.ris.healthcare
+package com.ris.healthcare.individual
 
-class Individual {
+import com.ris.healthcare.Persistent
+
+class Individual extends Persistent {
     String firstName
     String lastName
     String SSN

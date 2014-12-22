@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div class="basic-grey">
+
     <a href="#create-individual" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
                                                                        default="Skip to content&hellip;"/></a>
 
@@ -42,6 +42,6 @@
             </fieldset>
         </g:form>
     </div>
-</div>
+
 </body>
 </html>

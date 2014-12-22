@@ -7,11 +7,11 @@
 </head>
 
 <body>
-<div class="basic-grey">
+
     <h1>Admin Panel
         <span>&nbsp;</span>
     </h1>
 
-</div>
+
 </body>
 </html>

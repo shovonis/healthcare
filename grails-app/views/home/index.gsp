@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<div class="basic-grey">
+
     <h1>Welcome to HealthCare
         <span>&nbsp;</span>
     </h1>
@@ -17,11 +17,14 @@
                 <g:link url="[action: 'index', controller: 'individual']">Individual Home</g:link>
             </li>
             <li>
+                <g:link url="[action: 'index', controller: 'user']">User Home</g:link>
+            </li>
+            <li>
                 <g:link url="[action: 'index', controller: 'admin']">Admin Home</g:link>
             </li>
         </ul>
     </div>
 
-</div>
+
 </body>
 </html>

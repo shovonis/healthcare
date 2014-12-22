@@ -1,7 +1,8 @@
 package com.ris.healthcare
 
+import com.ris.healthcare.individual.Individual
 
-import static org.springframework.http.HttpStatus.*
+import static org.springframework.http.HttpStatus.NOT_FOUND
 
 class IndividualController {
 
@@ -9,17 +10,17 @@ class IndividualController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Individual.list(params), model: [individualInstanceCount: Individual.count()]
+        [individualInstanceList : Individual.list(params),
+         individualInstanceCount: Individual.count()]
     }
 
     def show(Individual individualInstance) {
-        respond individualInstance
+        [individualInstance: individualInstance]
     }
 
     def create() {
-        respond new Individual(params)
+        new Individual(params)
     }
-
 
     def save(Individual individualInstance) {
         if (individualInstance == null) {
@@ -32,21 +33,12 @@ class IndividualController {
             return
         }
 
-        individualInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'individual.label', default: 'Individual'), individualInstance.id])
-                redirect individualInstance
-            }
-            '*' { respond individualInstance, [status: CREATED] }
-        }
+        individualInstance.save(flush: true)
     }
 
     def edit(Individual individualInstance) {
-        respond individualInstance
+        [individualInstance: individualInstance]
     }
-
 
     def update(Individual individualInstance) {
         if (individualInstance == null) {
@@ -59,15 +51,7 @@ class IndividualController {
             return
         }
 
-        individualInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Individual.label', default: 'Individual'), individualInstance.id])
-                redirect individualInstance
-            }
-            '*' { respond individualInstance, [status: OK] }
-        }
+        individualInstance.save(flush: true)
     }
 
 
@@ -78,15 +62,7 @@ class IndividualController {
             return
         }
 
-        individualInstance.delete flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Individual.label', default: 'Individual'), individualInstance.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NO_CONTENT }
-        }
+        individualInstance.delete(flush: true)
     }
 
     protected void notFound() {

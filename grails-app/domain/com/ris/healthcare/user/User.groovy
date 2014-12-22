@@ -1,4 +1,4 @@
-package com.ris.healthcare
+package com.ris.healthcare.user
 
 /**
  * @author rifatul.islam

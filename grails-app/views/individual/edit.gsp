@@ -1,4 +1,4 @@
-<%@ page import="com.ris.healthcare.Individual" %>
+<%@ page import="com.ris.healthcare.individual.Individual" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +8,7 @@
 </head>
 
 <body>
-<div class="basic-grey">
-    <a href="#edit-individual" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
+    <a href="#edit-individual" class="skip" tabindex="-1"><g:message code="default.link.skip.label"/>
 
         <div class="nav" role="navigation">
             <ul>
@@ -45,7 +44,6 @@
                 </fieldset>
             </g:form>
         </div>
-</div>
 
 </body>
 </html>

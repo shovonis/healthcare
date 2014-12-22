@@ -1,5 +1,6 @@
 package com.ris.healthcare
 
+import com.ris.healthcare.individual.Individual
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 

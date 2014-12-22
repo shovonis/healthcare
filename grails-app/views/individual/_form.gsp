@@ -1,4 +1,4 @@
-<%@ page import="com.ris.healthcare.Individual" %>
+<%@ page import="com.ris.healthcare.individual.Individual" %>
 
 
 

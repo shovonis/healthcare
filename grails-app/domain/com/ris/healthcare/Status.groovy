@@ -5,5 +5,8 @@ package com.ris.healthcare
  * @since 12/15/14.
  */
 public enum Status {
-
+    ACTIVE,
+    PENDING,
+    DELETED,
+    CLOSED
 }

@@ -1,4 +1,4 @@
-<%@ page import="com.ris.healthcare.Individual" %>
+<%@ page import="com.ris.healthcare.individual.Individual" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +8,6 @@
 </head>
 
 <body>
-
-<div class="basic-grey">
-
     <div class="ui-tabs-nav" role="navigation">
         <ul>
             <li><a class="home" href="${createLink(uri: '/home')}"><g:message code="default.home.label"/></a></li>
@@ -68,7 +65,5 @@
             <g:paginate total="${individualInstanceCount ?: 0}"/>
         </div>
     </div>
-</div>
-
 </body>
 </html>

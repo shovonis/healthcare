@@ -21,8 +21,8 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-//            dbCreate = "create-drop"
+//            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "create-drop"
             url = "jdbc:mysql://localhost/healthcare"
             driverClassName = "com.mysql.jdbc.Driver"
             username = "root"

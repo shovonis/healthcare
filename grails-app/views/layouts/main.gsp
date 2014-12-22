@@ -26,6 +26,9 @@
 </head>
 
 <body>
-<g:layoutBody/>
+<div class="basic-grey">
+    <h1><span class="login-panel"><g:link action="logout">Logout</g:link></span></h1>
+    <g:layoutBody/>
+</div>
 </body>
 </html>

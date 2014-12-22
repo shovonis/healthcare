@@ -1,5 +1,7 @@
 package com.ris.healthcare
 
+import com.ris.healthcare.user.User
+
 class LoginController {
     static defaultAction = "showLoginForm"
 

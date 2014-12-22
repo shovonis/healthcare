@@ -1,5 +1,6 @@
 package com.ris.healthcare
 
+import com.ris.healthcare.user.User
 import grails.transaction.Transactional
 
 @Transactional
